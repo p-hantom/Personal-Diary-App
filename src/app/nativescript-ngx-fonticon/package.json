@@ -1,0 +1,46 @@
+{
+  "name": "nativescript-ngx-fonticon",
+  "version": "4.2.0",
+  "description": "Use custom font icon collections seamlessly with NativeScript for Angular.",
+  "main": "nativescript-ngx-fonticon",
+  "module": "nativescript-ngx-fonticon.js",
+  "typings": "nativescript-ngx-fonticon.d.ts",
+  "nativescript": {
+    "platforms": {
+      "android": "3.0.0",
+      "ios": "3.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanWalker/nativescript-ngx-fonticon.git"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "ng",
+    "ngx",
+    "ng2",
+    "nativescript",
+    "icon",
+    "font"
+  ],
+  "author": "Nathan Walker <walkerrunpdx@gmail.com>",
+  "contributors": [
+    {
+      "name": "Nathanael Anderson",
+      "email": "nathan@master-technology",
+      "url": "https://github.com/nathanaela"
+    },
+    {
+      "name": "Martin Reinhardt",
+      "email": "contact@martinreinhardt-online.de",
+      "url": "https://github.com/hypery2k"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NathanWalker/nativescript-ngx-fonticon/issues"
+  },
+  "homepage": "https://github.com/NathanWalker/nativescript-ngx-fonticon#readme"
+}

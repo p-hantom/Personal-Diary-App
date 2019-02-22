@@ -1,0 +1,17 @@
+<ActionBar title="">
+    <ActionItem>
+        <Label class="fas pen" text="&#xf5ad;" (tap)="onClickNewFile()"></Label>
+    </ActionItem>
+</ActionBar>
+
+<GridLayout class="page" rows="*, 60" columns="*, *">
+    <StackLayout row="0" col="0" colSpan="2">
+        <ExtractPage *ngIf="currentComponent === 'ExtractPage'"></ExtractPage>
+        <Calendar *ngIf="currentComponent === 'Calendar'"></Calendar>
+    </StackLayout>
+
+    <Button [class]="navigationButtonClasses('ExtractPage')" text="&#xf0c9;" (tap)="currentComponent = 'ExtractPage'"
+        row="1" col="0"></Button>
+    <Button [class]="navigationButtonClasses('Calendar')" text="&#xf073;" (tap)="currentComponent = 'Calendar'"
+        row="1" col="1"></Button>
+</GridLayout>

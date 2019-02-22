@@ -1,0 +1,10 @@
+<ActionBar title="">
+    <ActionItem (tap)="onGoBack()" android.systemIcon="ic_menu_back"></ActionItem>
+    <ActionItem android.systemIcon="ic_menu_edit" (tap)="onClickEdit()"></ActionItem>
+</ActionBar>
+
+<StackLayout rows="10, *">
+    <Label [text]="notePage.createDate | date:'dd/MM/yyyy'" row="0"></Label>
+    <TextView editable="false" [text]="notePage.noteContent" row="1"></TextView>
+</StackLayout>
+

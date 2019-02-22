@@ -1,0 +1,16 @@
+<ActionBar title="SQL App">
+    
+    <GridLayout row="0" columns="100%, 100%">
+        <TextField [(ngModel)]="noteContent" hint="noteContent" col="0"></TextField>
+    </GridLayout>
+    <ActionItem text="Add" ios.position="right" (tap)="insert()"></ActionItem>
+    <!-- <ActionItem text="Refresh" ios.position="left" (tap)="fetch()"></ActionItem> -->
+</ActionBar>
+
+<StackLayout>
+    <ListView [items]="notes">
+        <ng-template let-item="item">
+            <Label text="{{ item.id }} {{ item.noteContent }}" (tap)="delete2(item.id)"></Label>
+        </ng-template>
+    </ListView>
+</StackLayout>

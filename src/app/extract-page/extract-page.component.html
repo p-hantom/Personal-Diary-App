@@ -1,0 +1,21 @@
+<!-- <ActionBar title="">
+    <ActionItem android.systemIcon="ic_menu_edit" (tap)="onClickNewFile()"></ActionItem>
+</ActionBar> -->
+
+<!-- <GridLayout rows="*, 60" verticalAlignment="top"> -->
+    <StackLayout row="0" orientation="vertical">
+        <RadListView [items]="notes">
+            <ng-template let-item="item">
+                <Label [text]="item.noteContent" class="p-15" (tap)="onClick(item.id)"></Label>
+            </ng-template>
+        </RadListView>
+    </StackLayout>
+
+    <!-- <Button class="fas" text="&#xf0c9;"
+        row="1" col="0"></Button>
+    <Button class="fas" text="&#xf073;"
+        row="1" col="1"></Button> -->
+<!-- </GridLayout>  -->
+
+
+ 
