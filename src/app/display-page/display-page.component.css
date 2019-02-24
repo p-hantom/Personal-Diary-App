@@ -1,1 +1,9 @@
 /* Add mobile styles for the component here.  */
+.face{
+    font-size: 60;
+    /* horizontal-align: center; */
+}
+
+.text{
+    font-size: 23;
+}

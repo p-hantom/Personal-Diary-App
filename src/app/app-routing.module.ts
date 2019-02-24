@@ -7,9 +7,11 @@ import { ExtractPageComponent } from "./extract-page/extract-page.component";
 import { DisplayPageComponent } from "./display-page/display-page.component";
 import { DbDemoComponent } from "./db-demo/db-demo.component";
 import { HomePageComponent } from "./home-page/home-page.component";
+import { TextAnalyticsTestComponent } from './text-analytics-test/text-analytics-test.component'
 
 const routes: Routes = [
     { path: "", redirectTo: "/home-page", pathMatch: "full" },
+    { path: "text-analytics-test", component: TextAnalyticsTestComponent},
     { path: "home-page", component: HomePageComponent},
     { path: "extract_page", component: ExtractPageComponent},
     { path: "notepage", component: NotepageComponent},

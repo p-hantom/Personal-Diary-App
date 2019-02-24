@@ -11,14 +11,17 @@ import { DisplayPageComponent } from './display-page/display-page.component';
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 import { DbDemoComponent } from './db-demo/db-demo.component';
 
-import { NativeScriptCommonModule } from "nativescript-angular/common";
+
 import { NativeScriptUICalendarModule } from "nativescript-ui-calendar/angular";
 import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 import { DatePipe } from "@angular/common";
 import { HomePageComponent } from './home-page/home-page.component';
 import { CalendarComponent } from './calendar/calendar.component';
 
-import { HttpModule } from '@angular/http'
+import { HttpModule } from '@angular/http';
+import { TextAnalyticsTestComponent } from './text-analytics-test/text-analytics-test.component'
+import {NativeScriptHttpModule} from 'nativescript-angular/http';
+import { TextService } from "./azure-service/text.service";
 
 @NgModule({
     bootstrap: [
@@ -35,6 +38,7 @@ import { HttpModule } from '@angular/http'
             'ion': './assets/ionicons.css'
         }),
         HttpModule,
+        NativeScriptHttpModule,
     ],
     declarations: [
         AppComponent,
@@ -45,9 +49,11 @@ import { HttpModule } from '@angular/http'
         DbDemoComponent,
         HomePageComponent,
         CalendarComponent,
+        TextAnalyticsTestComponent,
     ],
     providers: [
         DatePipe,
+        TextService,
     ],
     schemas: [
         NO_ERRORS_SCHEMA

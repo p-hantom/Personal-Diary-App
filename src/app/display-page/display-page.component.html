@@ -5,6 +5,15 @@
 
 <StackLayout rows="10, *">
     <Label [text]="notePage.createDate | date:'dd/MM/yyyy'" row="0"></Label>
-    <TextView editable="false" [text]="notePage.noteContent" row="1"></TextView>
+
+    <container-element [ngSwitch]="notePage.sentiment">
+        <GridLayout *ngSwitchCase="1" rows="auto" columns="*"><Label class="fas face" text="&#xf5c8;" horizontalAlignment="center"></Label></GridLayout>
+        <GridLayout *ngSwitchCase="2" rows="auto" columns="*"><Label class="fas face" text="&#xf5a5;" horizontalAlignment="center"></Label></GridLayout>
+        <GridLayout *ngSwitchCase="3" rows="auto" columns="*"><Label class="fas face" text="&#xf5a4;" horizontalAlignment="center"></Label></GridLayout>
+        <GridLayout *ngSwitchCase="4" rows="auto" columns="*"><Label class="fas face" text="&#xf599;" horizontalAlignment="center"></Label></GridLayout>
+        <GridLayout *ngSwitchCase="5" rows="auto" columns="*"><Label class="fas face" text="&#xf586;" horizontalAlignment="center"></Label></GridLayout>
+    </container-element>
+
+    <TextView editable="false" [text]="notePage.noteContent" row="1" class="text"></TextView>
 </StackLayout>
 

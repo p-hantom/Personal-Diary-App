@@ -21,7 +21,7 @@ export class DbService{
         (new Sqlite("noteDb")).then(db => {
             //db.execSQL("DROP TABLE notes");
             console.log("db-Constructor")
-            db.execSQL("CREATE TABLE IF NOT EXISTS notes (id INTEGER PRIMARY KEY AUTOINCREMENT, noteContent TEXT, createDate DATETIME)").then(id => {
+            db.execSQL("CREATE TABLE IF NOT EXISTS notes (id INTEGER PRIMARY KEY AUTOINCREMENT, noteContent TEXT, createDate DATETIME, sentiment INTEGER, keyPhrases TEXT)").then(id => {
                 console.log("db-Constructor-create db")
                 this.database = db;
             }, error => {

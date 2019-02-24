@@ -13,6 +13,7 @@ import { DbService } from '../db.service';
 export class DisplayPageComponent implements OnInit {
   notePage: NotePage;
   id: number;
+  sentimentPic: string;
   constructor(private router: Router,  private route: ActivatedRoute,
     private dbService: DbService) { }
 
@@ -29,9 +30,13 @@ export class DisplayPageComponent implements OnInit {
               this.notePage = {
                   id: rows[0][0],
                   noteContent: rows[0][1],
-                  createDate: rows[0][2]
+                  createDate: rows[0][2],
+                  sentiment: rows[0][3],
+                  keyPhrases: rows[0][4],
               }
               console.log("fetchNote: "+this.notePage.noteContent);
+              console.log("sen: " + this.notePage.sentiment )
+              
           }, error => {
               console.log("SELECT ERROR",error);
           });

@@ -13,7 +13,8 @@ import { View } from "tns-core-modules/ui/core/view";
   moduleId: module.id,
 })
 export class ExtractPageComponent implements OnInit {
-  notes: Array<NotePage>;
+  //notes: Array<NotePage>;
+  notes = []
   
   constructor(private router: Router, private dbService: DbService) { }
 
@@ -36,10 +37,12 @@ export class ExtractPageComponent implements OnInit {
       .then(db => {
         db.all("SELECT * FROM notes").then(rows => {
           for(var row in rows) {
-              let note: NotePage = {
+              let note = {
                   id: rows[row][0],
                   noteContent: rows[row][1],
-                  createDate: rows[row][2]
+                  createDate: rows[row][2],
+                  sentiment: rows[0][3],
+                  keyPhrases: rows[0][4],
               }
               this.notes.push(note);
           } 

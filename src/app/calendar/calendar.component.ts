@@ -31,6 +31,7 @@ export class CalendarComponent implements OnInit {
                 id: rows[row][0],
                 noteContent: rows[row][1],
                 createDate: date,
+                keyPhrases: rows[row][4],
               });
             }
 
@@ -40,7 +41,7 @@ export class CalendarComponent implements OnInit {
             let colors = [new Color(200, 188, 26, 214), new Color(220, 255, 109, 130), new Color(255, 55, 45, 255), new Color(199, 17, 227, 10), new Color(255, 255, 54, 3)];
             for (let note of this.notes) {
               startDate = note.createDate;
-              let event = new calendarModule.CalendarEvent(note.noteContent, startDate, startDate);
+              let event = new calendarModule.CalendarEvent(note.keyPhrases, startDate, startDate);
               events.push(event);
             }
             this.calendarEvents = events;
